@@ -15,6 +15,7 @@ func main() {
 
 	bubble(arr)
 	selection(arr)
+	insertion(arr)
 }
 
 func bubble(arr [7]int) {
@@ -59,3 +60,24 @@ func selection(arr [7]int) {
 	fmt.Println(arr)
 	//fmt.Println(count)
 }
+
+func insertion(arr [7]int) {
+	//Insertion Sort
+	//count := 0
+	for i := 0; i < 7; i++ {
+		var j = i
+		//count++
+		for j >= 1 && arr[j] < arr[j-1] {
+			//count++
+			arr[j], arr[j-1] = arr[j-1], arr[j]
+			j--
+		}
+	}
+	fmt.Println("Insertion Sort Result:-")
+	fmt.Println(arr)
+	//fmt.Println(count)
+}
+
+//Merge Sort
+//Quick Sort
+//Heap Sort
